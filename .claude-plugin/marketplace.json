@@ -1,0 +1,27 @@
+{
+  "name": "claude-mods",
+  "owner": { "name": "Christian Lemer" },
+  "metadata": {
+    "description": "Claude Code mods kept in other people's monorepos, re-exposed one by one through git-subdir sources so Talos can install them."
+  },
+  "plugins": [
+    {
+      "name": "blast-radius",
+      "description": "Holds a risky shell command, shows what it would change, and asks Proceed or Cancel. From anthropics/claude-code-playground, shared as-is.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-code-playground.git",
+        "path": "claude-code/mods/blast-radius"
+      }
+    },
+    {
+      "name": "replay-theater",
+      "description": "Steps through the file edits Claude made in the last turn, one diff at a time (/replay). From anthropics/claude-code-playground, shared as-is.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-code-playground.git",
+        "path": "claude-code/mods/replay-theater"
+      }
+    }
+  ]
+}
